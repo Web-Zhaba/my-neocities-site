@@ -29,5 +29,5 @@ jobs:
         uses: bcomnes/deploy-to-neocities@v2
         with:
           api_key: ${{ secrets.NEOCITIES_API_KEY }}
-          cleanup: false # поставьте true, если хотите удалять на хостинге файлы, которых нет в dist
+          cleanup: false
           dist_dir: dist

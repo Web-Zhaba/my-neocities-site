@@ -1,1 +1,98 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Silver';
+  src: url('./assets/Silver.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #08090d;
+  --ink: #dbe0eb;
+  --dim: #8c94a8;
+  --warm: #fabd66;
+  --red: #ff5947;
+  --father: #ed7330;
+  --n1: #0e1224;
+  --n2: #161c36;
+  --n3: #232a4a;
+  --n4: #343c5e;
+  --amber: #d98a38;
+  --btn-bg: rgba(10, 10, 13, 0.75);
+  --btn-line: rgba(77, 82, 102, 0.6);
+
+  --font: "Silver", "Lucida Console", "Consolas", monospace;
+  --fs-s: 18px;
+  --fs-m: 21px;
+  --fs-l: 28px;
+  --fs-xl: 40px;
+  --fs-title: clamp(56px, 13vw, 112px);
+  --measure: 68ch;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html { background: var(--bg); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--fs-m);
+  line-height: 1.25;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+  overflow-wrap: break-word;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+figure { margin: 0; }
+code { font-family: var(--font); color: var(--dim); }
+a { color: var(--warm); }
+a:hover { color: #fff; }
+:focus-visible { outline: 2px solid var(--warm); outline-offset: 2px; }
+
+h1, h2, h3 { font-weight: normal; line-height: 1; margin: 0; }
+h1 { font-size: var(--fs-title); letter-spacing: 0.06em; }
+h2 { font-size: var(--fs-xl); letter-spacing: 0.04em; margin-bottom: 12px; }
+h3 { font-size: var(--fs-l); margin-bottom: 8px; }
+p { margin: 0 0 14px; max-width: var(--measure); }
+ul, ol { margin: 0 0 14px; padding-left: 1.2em; max-width: var(--measure); }
+li { margin-bottom: 6px; }
+hr { border: 0; border-top: 2px solid var(--n3); margin: 32px 0; }
+
+.skip {
+  position: absolute; left: 12px; top: -60px; z-index: 100;
+  background: var(--btn-bg); color: var(--warm); padding: 6px 12px; text-decoration: none;
+}
+.skip:focus { top: 12px; }
+
+.scan {
+  position: fixed; inset: 0; pointer-events: none; z-index: 50;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0 2px, rgba(0, 0, 0, 0.18) 2px 3px);
+  mix-blend-mode: multiply;
+}
+
+#snow {
+  position: fixed; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 0;
+  
+}
+
+.page {
+  position: relative; z-index: 1;
+  max-width: 1040px; margin: 0 auto;
+  padding: 24px 16px 40px;
+  display: flex; flex-direction: column; gap: 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #snow { display: none; }
+}
