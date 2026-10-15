@@ -4,6 +4,7 @@
   import Profile from "./lib/Profile.svelte";
   import LinkList from "./lib/LinkList.svelte";
   import { projects } from "./lib/links.js";
+  import AboutMe from "./lib/AboutMe.svelte";
 </script>
 
 <section
@@ -17,7 +18,7 @@
     <Clock />
     <Profile />
     <LinkList title="My projects:" items={projects} />
-
+    <AboutMe />
     <!-- <LinkList
       title="My socials:"
       items={[{ name: "Telegram", href: "#", icon: "telegramFav.png" }]}

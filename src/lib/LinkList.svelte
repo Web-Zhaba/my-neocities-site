@@ -7,7 +7,7 @@
   <ul class="flex-col gap-2 font-space max-w-fit">
     {#each items as item (item.name)}
       <li
-        class="p-2 mt-2 mb-2 rounded-4xl backdrop-blur-[1px] bg-nothing-gray/40 border border-white/5 shadow-[inset_0_0_12px_rgba(255,255,255,0.03)] select-none"
+        class="p-2 mt-2 mb-2 backdrop-blur-[1px] bg-nothing-gray/40 border border-white/5 shadow-[inset_0_0_12px_rgba(255,255,255,0.03)] select-none"
       >
         <a class="flex gap-3 items-center" href={item.href} aria-label={item.name}>
           <img

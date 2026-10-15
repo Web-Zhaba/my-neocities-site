@@ -20,7 +20,7 @@
     <img
       src={squint ? "happy_closed_eyes.png" : "happy.png"}
       alt="MainPhoto"
-      class="[image-rendering:pixelated] w-64 sm:w-80 rounded-4xl backdrop-blur-[1px] bg-nothing-gray/40 border border-white/5 shadow-[inset_0_0_12px_rgba(255,255,255,0.03)] select-none"
+      class="[image-rendering:pixelated] w-64 sm:w-80 backdrop-blur-[1px] bg-nothing-gray/40 border border-white/5 shadow-[inset_0_0_12px_rgba(255,255,255,0.03)] select-none"
     />
   </button>
   <div class="flex flex-col gap-2 ml-7 mb-1.5 mt-1.5">
